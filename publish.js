@@ -367,7 +367,7 @@ function buildSubNavMembers(list, type) {
         html += '<div class="member-type">' + type + '</div>';
         html += '<ul class="inner">';
         list.forEach(function(item) {
-            html += '<li>' + decodeURL(linkto(item.longname, item.name)) + '</li>';
+            html += '<li>' + decodeURI(linkto(item.longname, item.name)) + '</li>';
         });
         html += '</ul>';
     }
