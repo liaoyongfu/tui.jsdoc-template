@@ -45,8 +45,8 @@ function find(spec) {
 
 function tutoriallink(tutorial) {
     return helper.toTutorial(tutorial, null, {
-        tag: 'em', 
-        classname: 'disabled', 
+        tag: 'em',
+        classname: 'disabled',
         prefix: 'Tutorial: '
     });
 }
@@ -367,7 +367,7 @@ function buildSubNavMembers(list, type) {
         html += '<div class="member-type">' + type + '</div>';
         html += '<ul class="inner">';
         list.forEach(function(item) {
-            html += '<li>' + linkto(item.longname, item.name) + '</li>';
+            html += '<li>' + decodeURL(linkto(item.longname, item.name)) + '</li>';
         });
         html += '</ul>';
     }
